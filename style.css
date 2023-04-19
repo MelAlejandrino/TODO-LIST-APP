@@ -1,0 +1,180 @@
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html, body, section{
+	min-height: 100vh;
+}
+
+img, picture, svg, video{
+	display: block;
+	max-width: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+a{
+text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* general styling */
+section{
+    display: grid;
+    place-items: center;
+    background-color: rgb(112, 112, 112);
+    font-family: 'Lateef', serif;
+    font-weight:300;
+}
+
+.container{
+    border: 1px solid black;
+    height: 100%;
+    background-color: black;
+    padding: 1em;
+    max-width: 26.75em;
+}
+.container-content{
+    display: grid;
+    gap: 1em;
+}
+.container-content > header{
+    background-color: white;
+    padding: 2em 1em;
+}
+
+.container-content > header > article > h1{
+    font-size: 4.375rem;
+    line-height: 80.6%;
+    margin-bottom: 0.2em;
+    
+}
+
+p{
+    line-height: 96.6%;
+    font-size: 1.1rem;
+    
+}
+
+.container-button{
+    width: 100%;
+}
+
+button{
+    width: 100%;
+    border: none;
+    font-size: 2.375rem;
+    cursor: pointer;
+}
+
+header, button{
+    border-radius: 2.2em;
+}
+
+ul{
+    display: grid;
+    gap: 0.5em;
+}
+li{
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+li > form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+input[type="checkbox"]{
+    transform: scale(1.2);
+}
+
+  
+.container-addtask{
+    position: absolute;
+    top: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    max-width: 26.75em;
+    display: none;
+    opacity: 0;
+    transition: opacity 15s ease;
+    border: 1px solid rgb(62, 216, 255);
+}
+
+.addtask-content > form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    padding: 0.5em;
+    color: rgb(255, 255, 255);
+}
+
+.container-addtask.active{
+    display: block;
+    opacity: 1;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 0.5em;
+}
+
+#addButton{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 1em;
+    cursor: pointer;
+}
+
+article > h1{
+    font-size: 2em;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+}
