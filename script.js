@@ -8,14 +8,14 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 const d = new Date();
 let day = days[d.getDay()];
 
-if (currentHour >= 0 && currentHour < 1) {
-    daytime.innerText = "GOOD MIDNIGHT";
+if (currentHour >= 18 && currentHour < 0) {
+    daytime.innerText = "EVENING";
   } else if (currentHour >= 1 && currentHour < 12) {
     daytime.innerText = "MORNING";
   } else if (currentHour >= 12 && currentHour < 18) {
     daytime.innerText = "AFTERNOON";
   } else {
-    daytime.innerText = "EVENING";
+    daytime.innerText = "MIDNIGHT";
   }
   adlaw.innerText = day;
   date.innerText = dateString;
